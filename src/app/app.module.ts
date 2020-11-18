@@ -1,16 +1,24 @@
 import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser'; // since we are building browser based app we can use the browser app module which is available via Angular
-import { AppComponent } from './app.component'; // a starting component
+import { BrowserModule } from '@angular/platform-browser';
+import { AppComponent } from './app.component';
+import { MediaItemComponent } from './media-item.component';
+import { MediaItemListComponent } from './media-item-list.component';
+import { FavoriteDirective } from './favorite.directive';
+import { CategoryListPipe } from './category-list.pipe';
 
 @NgModule({
-  imports:  // bring in other Angular modules that your module might need
+  imports: [
     BrowserModule
   ],
-  declarations:[ // make components, directives, and pipes available to your module
-    AppComponent
+  declarations: [
+    AppComponent,
+    MediaItemComponent,
+    MediaItemListComponent,
+    FavoriteDirective,
+    CategoryListPipe
   ],
-  bootstrap:[ // used for a root module and will let Angular know which component(s) will be the starting point for bootstrapping process
+  bootstrap: [
     AppComponent
   ]
 })
-export class AppModule {
+export class AppModule {}
